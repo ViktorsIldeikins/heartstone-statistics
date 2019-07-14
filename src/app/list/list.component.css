@@ -1,0 +1,40 @@
+.card-row {
+  border: solid #1f0803 1px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 6px 6px 6px 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  max-width: 400px;
+}
+
+.mage {
+  background-color: #6bd2fe;
+}
+.warlock {
+  background-color: #cc34a2;
+}
+.priest {
+  background-color: #feea3a;
+}
+.rogue {
+  background-color: #36bd45;
+}
+.warrior {
+  background-color: #d0751a ;
+}
+.hunter {
+  background-color: #9b8210 ;
+}
+.shaman {
+  background-color: #9d74ff ;
+}
+.druid {
+  background-color: #82d09c ;
+}
+.paladin {
+  background-color: #ffc511 ;
+}
+.neutral {
+  background-color: #c7c1c4;
+}

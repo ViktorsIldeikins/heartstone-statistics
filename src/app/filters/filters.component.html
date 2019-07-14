@@ -1,0 +1,9 @@
+<p>filters works!</p>
+
+<label>
+  <select label="filterClass" (change)="onClassFilterChange($event.target.value)">
+    <option *ngFor="let class of classes" value="{{class}}">
+      {{class}}
+    </option>
+  </select>
+</label>

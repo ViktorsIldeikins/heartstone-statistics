@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { firstCards } from '../cards';
+import { CardsService } from '../services/cards.service';
 
 @Component({
   selector: 'app-list',
@@ -8,11 +8,17 @@ import { firstCards } from '../cards';
 })
 export class ListComponent implements OnInit {
 
-  cards = firstCards;
+  private cards;
 
-  constructor() { }
+  constructor(private cardService: CardsService) {}
 
-  ngOnInit() {
+  private static formatResponse(response) {
+    return response.slice(0, 200).map(card => ({...card, class: card.cardClass.toLocaleLowerCase()}));
   }
 
+  ngOnInit(): void {
+    this.cardService.getCards().subscribe(response => {
+      this.cards = ListComponent.formatResponse(response);
+    });
+  }
 }

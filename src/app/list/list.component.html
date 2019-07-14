@@ -1,20 +1,8 @@
-<p>list works!</p>
+<h2>
+  List of cards
+</h2>
 
-<table>
-  <tr>
-    <th>name</th>
-    <th>card class</th>
-    <th>type</th>
-  </tr>
-  <tr *ngFor="let card of cards">
-    <td>
-      {{card.name}}
-    </td>
-    <td>
-      {{card.cardClass}}
-    </td>
-    <td>
-      {{card.type}}
-    </td>
-  </tr>
-</table>
+<div *ngFor="let card of cards" class="card-row {{card.class}}" >
+  {{card.name}} {{card.type}}
+  <img src="../../assets/icons/mana.png" alt="health" height="18px"/>{{card.cost}}
+</div>
